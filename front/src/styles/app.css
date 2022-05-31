@@ -1,0 +1,5 @@
+@import "./fonts.css";
+@import "./reset.css";
+@import "./custom-properties.css";
+@import "./custom-styles.css";
+@import "./components/main.css";

@@ -1,0 +1,14 @@
+:root {
+    /* Fonts */
+    --font-primary: "Arial Regular", sans-serif;
+
+    /* Colors */
+    --color-primary: #ffffff;
+
+    /* Sizes */
+    --container-width: 1170px;
+    --container-half-padding: 15px;
+
+    /* Miscellaneous */
+    --max-z-index: 20;
+}
