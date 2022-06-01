@@ -7,6 +7,8 @@ const emitter = new EventEmitter();
 
 initSymbolSprite('./../images/symbol-sprite.html', 24);
 
+import('@/js/components/component').then(({ fireComponent }) => fireComponent());
+
 sleep(5000).then(() => {
     // eslint-disable-next-line no-console
     console.log('end');

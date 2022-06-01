@@ -1,8 +1,5 @@
 {
     "private": true,
-    "engines": {
-        "node": ">=14"
-    },
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.config.js --mode=development",
         "start": "cross-env NODE_ENV=development webpack --config config/webpack.dev.config.js --watch --mode=development",

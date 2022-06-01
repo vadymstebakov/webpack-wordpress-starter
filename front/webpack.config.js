@@ -25,10 +25,16 @@ const useStyleLoaders = () => {
         {
             loader: 'css-loader',
             options: {
+                importLoaders: 1,
                 sourceMap: isDev,
             },
         },
-        'postcss-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                sourceMap: isDev,
+            },
+        },
     ];
 };
 
