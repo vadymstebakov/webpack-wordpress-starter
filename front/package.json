@@ -49,7 +49,7 @@
         "webpack-merge": "^5.8.0"
     },
     "browserslist": [
-        ">0.3%",
+        ">0.59%",
         "not dead",
         "not op_mini all",
         "not ie <= 11"
