@@ -1,5 +1,10 @@
 {
     "private": true,
+    "engines": {
+        "node": ">=16.0.0",
+        "yarn": "please-use-npm",
+        "npm": ">=7.10.0"
+    },
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack --config config/webpack.dev.config.js --mode=development",
         "start": "cross-env NODE_ENV=development webpack --config config/webpack.dev.config.js --watch --mode=development",
@@ -7,20 +12,14 @@
         "stats": "webpack --config config/webpack.prod.config.js --mode=production --json > stats.json && webpack-bundle-analyzer stats.json",
         "lint:js": "eslint --ext .js src/js/",
         "lint:css": "stylelint \"src/styles/**/*.css\"",
-        "prepare": "cd .. && husky install front/.husky",
-        "lint-staged": "lint-staged"
-    },
-    "lint-staged": {
-        "src/js/**/*.js": [
-            "npm run lint:js"
-        ],
-        "src/styles/**/*.css": [
-            "npm run lint:css"
-        ]
+        "prettier": "prettier --write .",
+        "prepare": "cd .. && husky install front/.husky"
     },
     "devDependencies": {
         "@babel/core": "^7.18.2",
         "@babel/preset-env": "^7.18.2",
+        "@commitlint/cli": "^17.0.2",
+        "@commitlint/config-conventional": "^17.0.2",
         "autoprefixer": "^10.4.7",
         "babel-loader": "^8.2.5",
         "clean-webpack-plugin": "^4.0.0",
@@ -34,7 +33,6 @@
         "html-webpack-plugin": "^5.5.0",
         "husky": "^8.0.1",
         "imagemin-webpack-plugin": "^2.4.2",
-        "lint-staged": "^12.5.0",
         "mini-css-extract-plugin": "^2.6.0",
         "postcss": "^8.4.14",
         "postcss-loader": "^7.0.0",

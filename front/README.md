@@ -15,5 +15,5 @@
 -   `npm run stats` analyses your project;
 -   `npm run lint:js` checks your JavaScript for errors and warnings;
 -   `npm run lint:styles` checks your styles for errors and warnings;
+-   `npm run prettier` fixes code formatting;
 -   `npm run prepare` installs husky;
--   `npm run lint-staged` checks all lints;
