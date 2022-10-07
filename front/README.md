@@ -3,7 +3,8 @@
 ## Build setup
 
 1. Install [NodeJS](https://nodejs.org/en/);
-2. Install the NPM dependencies by running `npm install`.
+    > Require [Node.js](https://nodejs.org) version >= 16.0.0.
+2. Install the NPM dependencies by running `npm ci`.
 
 ## Usage
 
@@ -15,5 +16,6 @@
 -   `npm run stats` analyses your project;
 -   `npm run lint:js` checks your JavaScript for errors and warnings;
 -   `npm run lint:styles` checks your styles for errors and warnings;
--   `npm run prettier` fixes code formatting;
+-   `npm run lint:prettier` checks your code formatting;
+-   `npm run lint:prettier:fix` fixes your code formatting;
 -   `npm run prepare` installs husky;
