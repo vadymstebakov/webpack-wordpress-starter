@@ -12,7 +12,8 @@
         "stats": "webpack --config config/webpack.prod.config.js --mode=production --json > stats.json && webpack-bundle-analyzer stats.json",
         "lint:js": "eslint --ext .js src/js/",
         "lint:css": "stylelint \"src/styles/**/*.css\"",
-        "prettier": "prettier --write .",
+        "lint:prettier": "prettier --check \"**/*.{js,json,html,css}\"",
+        "lint:prettier:fix": "prettier --write \"**/*.{js,json,html,css}\"",
         "prepare": "cd .. && husky install front/.husky"
     },
     "devDependencies": {
