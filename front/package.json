@@ -47,9 +47,18 @@
         "webpack-merge": "^5.8.0"
     },
     "browserslist": [
-        ">0.59%",
+        ">=1%",
         "not dead",
         "not op_mini all",
-        "not ie <= 11"
+        "not and_uc 12",
+        "Firefox >= 80",
+        "Chrome >= 80",
+        "Opera >= 70",
+        "Safari >= 14",
+        "Edge >= 80",
+        "ios_saf >= 14",
+        "Samsung >= 11",
+        "and_chr >= 80",
+        "and_ff >= 80"
     ]
 }
