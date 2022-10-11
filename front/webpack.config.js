@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const environment = require('./config/environment');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -45,6 +46,7 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: environment.paths.output,
+        publicPath: 'assets',
     },
     module: {
         rules: [
@@ -118,6 +120,11 @@ module.exports = {
                     },
                 },
             ],
+        }),
+        new WebpackManifestPlugin({
+            filter: file => {
+                return /^(app|vendors)\.(js|css)$/.test(file.name);
+            },
         }),
     ].concat(copySymbolSprite()),
     resolve: {
