@@ -8,6 +8,16 @@ module.exports = merge(webpackConfiguration, {
     mode: 'production',
     devtool: false,
     optimization: {
+        splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
         minimize: true,
         minimizer: [
             new TerserPlugin({
