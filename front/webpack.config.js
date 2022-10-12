@@ -46,7 +46,6 @@ module.exports = {
     output: {
         filename: 'js/[name].js',
         path: environment.paths.output,
-        publicPath: 'assets',
     },
     module: {
         rules: [
@@ -122,6 +121,7 @@ module.exports = {
             ],
         }),
         new WebpackManifestPlugin({
+            publicPath: 'assets',
             filter: file => {
                 return /^(app|vendors)\.(js|css)$/.test(file.name);
             },
